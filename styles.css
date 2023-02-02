@@ -8,6 +8,10 @@ body {
     overscroll-behavior: none; /* prevent over scrolling */
   }
 
+button {
+    border-radius: 2em;
+}
+
 #background-vid {
     position: absolute;
     top: 60px;
@@ -18,16 +22,6 @@ body {
     min-height: 100%;
     object-fit: cover;
 }
-
-/* .background img {
-    position: absolute;
-    display: block;
-    top: 1180px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-attachment: fixed;
-} */
 
 .header {
     height: 60px;
@@ -74,6 +68,14 @@ body {
 .section1-left {
     margin-bottom: 60px;
     color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.section1-left button a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
 }
 
 .section1-right {
@@ -105,14 +107,29 @@ body {
     width: 250px;
     border-style: solid;
     border-radius: 25px;
+    border-color: darkred;
+    border-width: 3px;
 }
 
 .card:hover{
-    box-shadow: 0 0 0 2px black;
+    box-shadow: 0 0 0 5px darkred;
 }
 
 .card-txt {
     text-align: center;
+    width: 250px;
+}
+
+#aki {
+    background-image: url(./resources/aki.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#makima {
+    background-image: url(./resources/makima.avif);
+    background-size: cover;
+    background-position: center;
 }
 
 #pochita {
@@ -135,11 +152,13 @@ body {
     background-position: center;
 
     color: white;
+
+    font-size: 60px;
 }
 
 .section4 {
     height: 350px;
-    background-color: transparent;
+    background-color: rgb(236, 236, 236);
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -147,24 +166,51 @@ body {
 }
 
 .section4-left {
+    color: black;
+    width: 500px;
+    font-size: 18pt;
+    padding-left: 64px;
+}
+
+.section4-right {
+    padding-right: 64px;
+}
+
+.section4-right button {
+    padding: 8px 16px;
+    background-color: darkred;
     color: white;
+    transition: all 0.5s ease-out;
+}
+
+.section4-right button:hover {
+    background-color: rgb(205, 36, 36);
+}
+
+#note {
+    font-size: 8pt;
 }
 
 .overlay-box {
-    height: 200px;
-    width: 600px;
+    height: 260px;
+    width: 800px;
     z-index: 1;
     background-color: rgb(130, 183, 220, 0.5);
     border-radius: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 32px;
 }
 
 .section1 .overlay-box {
     height: 200px;
-    margin-bottom: 36px;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+.section4 .overlay-box {
+    display: flex;
+    gap: 50px;
 }
 
 .footer {

@@ -1,4 +1,4 @@
-# 
+# CSM Inspired Landing Page
 
 
 # Sources
@@ -12,3 +12,8 @@ Background 2: Chainsaw Man Anime, Chainsaw Man Wiki (https://chainsaw-man.fandom
 Pochita Drawing (card 4): https://analogmang.tumblr.com/post/654550925241909248/denji-and-pochita
 
 Kon Icon - https://www.pinterest.com/pin/353462270768219163/?mt=login
+
+Aki: https://www.crunchyroll.com/anime-news/2022/11/03/chainsaw-mans-aki-lights-up-the-cover-of-womens-lifestyle-magazine-anan
+
+Makima: https://movieweb.com/chainsaw-man-what-is-makimas-power/
+
