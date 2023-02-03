@@ -17,3 +17,5 @@ Aki: https://www.crunchyroll.com/anime-news/2022/11/03/chainsaw-mans-aki-lights-
 
 Makima: https://movieweb.com/chainsaw-man-what-is-makimas-power/
 
+Power: https://wegotthiscovered.com/anime/who-is-power-in-chainsaw-man-and-what-are-her-devil-powers/
+

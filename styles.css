@@ -126,6 +126,12 @@ button {
     background-position: center;
 }
 
+#power {
+    background-image: url(./resources/power.webp);
+    background-size: cover;
+    background-position: center;
+}
+
 #makima {
     background-image: url(./resources/makima.avif);
     background-size: cover;
