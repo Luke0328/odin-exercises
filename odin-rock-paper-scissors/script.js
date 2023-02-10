@@ -6,8 +6,11 @@ function getComputerChoice() {
 function rps(userChoice, computerChoice) {
     let user_win = 0;
     userChoice = userChoice.toLowerCase();
+
+    const res = document.querySelector(".result");
+
     if(userChoice === computerChoice) {
-        console.log("Tie!");
+        res.textContent = "Tie!";
         return -1;
     }
     switch (userChoice) {
@@ -49,14 +52,15 @@ function rps(userChoice, computerChoice) {
             break;
     }
 
+
     const capitalizedUserChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1);
     const capitalizedComputerChoice = computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
 
     if(user_win) {
-        console.log(`You win! ${capitalizedUserChoice} beats ${capitalizedComputerChoice}`);
+        res.textContent = `You win! ${capitalizedUserChoice} beats ${capitalizedComputerChoice}`;
     }
     else {
-        console.log(`You lost! ${capitalizedUserChoice} loses to ${capitalizedComputerChoice}`);
+        res.textContent = `You lost! ${capitalizedUserChoice} loses to ${capitalizedComputerChoice}`;
     }
     return user_win;
 }
@@ -91,4 +95,60 @@ function game() {
     }
 }
 
-game();
+const rock_button = document.querySelector(".rock");
+
+let wins = 0;
+let losses = 0;
+
+function displayScore() {
+    const score = document.querySelector(".score");
+    if(wins >= 5) {
+        score.textContent = "Player wins!";
+        return;
+    }
+    else if(losses >= 5) {
+        score.textContent = "Computer wins!"
+        return;
+    }
+
+    score.textContent = `${wins} wins, ${losses} losses`;
+}
+
+displayScore();
+
+rock_button.addEventListener("click", (e) => {
+    const res = rps('rock', getComputerChoice());
+    if(res === 1) {
+        wins++;
+    }
+    else if(res === 0) {
+        losses++;
+    }
+    displayScore();
+});
+
+const paper_button = document.querySelector(".paper");
+
+paper_button.addEventListener("click", (e) => {
+    const res = rps('paper', getComputerChoice());
+    if(res === 1) {
+        wins++;
+    }
+    else if(res === 0) {
+        losses++;
+    }
+    displayScore();
+});
+
+const sci_button = document.querySelector(".scissors");
+
+sci_button.addEventListener("click", (e) => {
+    const res = rps('scissors', getComputerChoice());
+    if(res === 1) {
+        wins++;
+    }
+    else if(res === 0) {
+        losses++;
+    }
+    displayScore();
+});
