@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "NorseFont";
+    src: url(Norse-Bold.otf) format("woff2");
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    overscroll-behavior: none; /* prevent over scrolling */
+}
+
+.img-section {
+    height: 100vh;
+    background-image: url(juan-felipe-Kk8mEQAoIpI-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.logo-overlay {
+    background-color: black;
+    opacity: 0.7;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 33.3vh;
+    gap: 1rem;
+}
+
+.logo {
+    display: block;
+    max-height: 20vh;
+}
+
+.logo-title {
+    color: white;
+    font-size: 8rem;
+    line-height: 25vh;
+    font-family: "NorseFont", Fallback, sans-serif;
+    position: relative;
+    top: 12px;
+}
+
+.top {
+    background-color: whitesmoke;
+    height: calc(100vh / 3);
+    position: relative;
+    padding-left: 3rem;
+}
+
+.top-text {
+    margin: 0;
+    position: absolute;
+    bottom: 2rem;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mid {
+    height: calc(100vh / 3);
+    padding-left: 3rem;
+}
+
+.mid-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mid-input-group-row {
+    display: flex;
+    gap: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group>label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.input-group>input {
+    width: 15rem;
+    height: 1.5rem;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+.bot {
+    background-color: whitesmoke;
+    height: calc(100vh / 3);
+    padding-left: 3rem;
+
+}
+
+.bot-create-account-button {
+    margin-top: 2rem;
+}
+
+/* Desktop Styles*/
+@media only screen and (min-width: 401px){
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .img-section {
+        height: auto;
+        width: 35vw;
+    }
+
+    .form-section {
+        width: 65vw;
+    }
+
+}
+
