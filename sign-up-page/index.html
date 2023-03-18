@@ -22,43 +22,64 @@
 
             <p class="mid-text">Let's do this!</p>
 
-            <div class="mid-input-group-row">
-                <div class="input-group">
-                    <label for="first-name-input">First Name</label>
-                    <input type="text" id="first-name-input">
+            <form action="" method="get" id="main-form">
+                <div class="mid-input-group-row">
+                    <div class="input-group">
+                        <label for="first-name-input">First Name</label>
+                        <input type="text" id="first-name-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="last-name-input">Last Name</label>
+                        <input type="text" id="last-name-input">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="last-name-input">Last Name</label>
-                    <input type="text" id="last-name-input">
+                <div class="mid-input-group-row">
+                    <div class="input-group">
+                        <label for="email-input">Email</label>
+                        <input type="email" id="email-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone-number-input">Phone Number</label>
+                        <input type="tel" id="phone-number-input">
+                    </div>
                 </div>
-            </div>
-
-            <div class="mid-input-group-row">
-                <div class="input-group">
-                    <label for="email-input">Email</label>
-                    <input type="email" id="email-input">
+                <div class="mid-input-group-row">
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
+                        <span class="password-mismatch">* Passwords do not match</span>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password-input">Confirm Password</label>
+                        <input type="password" id="confirm-password-input">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="phone-number-input">Phone Number</label>
-                    <input type="tel" id="phone-number-input">
-                </div>
-            </div>
-
-            <div class="mid-input-group-row">
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password">
-                </div>
-                <div class="input-group">
-                    <label for="confirm-password-input">Confirm Password</label>
-                    <input type="password" id="confirm-password-input">
-                </div>
-            </div>
+            </form>
         </div>
         <div class="bot">
-            <button class="bot-create-account-button">Create Account</button>
+            <button type="button" form="main-form" value="Submit" class="bot-create-account-button" onclick="checkPwd()">Create Account</button>
             <p class="bot-text"> Already have an account? <a href="" class="bot-text-link">Log in</a></p>
         </div>
     </div>
 </body>
+<script>
+    function checkPwd() {
+        let pwd_input = document.getElementById("password");
+        let confirm_pwd_input = document.getElementById("confirm-password-input");
+        let pwd_mismatch = document.querySelector(".password-mismatch");
+        if(pwd_input.value !== confirm_pwd_input.value) {
+            pwd_input.classList.add("error");
+            confirm_pwd_input.classList.add("error");
+            pwd_mismatch.style.display = "inline";
+        }
+        else {
+            pwd_input.classList.remove("error");
+            confirm_pwd_input.classList.remove("error");
+            pwd_mismatch.style.display = "none";
+            alert("Form Submitted!");
+        }
+    }
+    
+
+</script>
 </html>
