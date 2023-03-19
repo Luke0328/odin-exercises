@@ -1,0 +1,39 @@
+.root {
+    --primary-color: black;
+    --secondary-color: white;
+    --accent-color: gold;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 3fr repeat(3, 1fr) 3fr repeat(3, 1fr) 20fr;
+}
+
+.header {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+}
+
+.main-content {
+    grid-column: 2 / -2;
+    grid-row: 2 / -1;
+}
+
+.main-content-sidebar {
+    grid-column: -2 / -1;
+    grid-row: 2 / -1;
+}
