@@ -3,5 +3,7 @@ Web development exercises and projects from The Odin Project: https://www.theodi
 
 **Projects:**  
 Landing Page: https://luke0328.github.io/odin-projects/odin-landing-page/index.html  
+Dashboard: https://luke0328.github.io/odin-projects/dashboard/index.html  
 Sign Up Page: https://luke0328.github.io/odin-projects/sign-up-page/index.html  
 Basic Calculator: https://luke0328.github.io/odin-projects/odin-calculator/index.html  
+
